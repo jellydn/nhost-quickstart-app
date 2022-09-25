@@ -1,13 +1,24 @@
-import '../styles/globals.css';
-import { Toaster } from 'react-hot-toast';
-import { UserProvider } from '../UserProvider';
+import { UserProvider } from "../UserProvider";
+import "../styles/globals.css";
+import { NhostNextProvider, NhostClient } from "@nhost/nextjs";
+import { NhostApolloProvider } from "@nhost/react-apollo";
+import { Toaster } from "react-hot-toast";
+
+const nhost = new NhostClient({
+  subdomain: process.env.NEXT_PUBLIC_NHOST_SUBDOMAIN || "",
+  region: process.env.NEXT_PUBLIC_NHOST_REGION || "",
+});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <UserProvider>
-      <Component {...pageProps} />
-      <Toaster />
-    </UserProvider>
+    <NhostNextProvider nhost={nhost} initial={pageProps.nhostSession}>
+      <NhostApolloProvider nhost={nhost}>
+        <UserProvider>
+          <Component {...pageProps} />
+          <Toaster />
+        </UserProvider>
+      </NhostApolloProvider>
+    </NhostNextProvider>
   );
 }
 
