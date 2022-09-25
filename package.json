@@ -1,5 +1,5 @@
 {
-  "name": "e-knowledge-app",
+  "name": "nhost-quickstart-app",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",

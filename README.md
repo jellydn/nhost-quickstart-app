@@ -1,4 +1,4 @@
-# Welcome to e-knowledge-app 👋
+# Welcome to nhost-quickstart-app 👋
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://docs.nhost.io/platform/quickstarts/nextjs)
@@ -6,6 +6,12 @@
 [![Twitter: jellydn](https://img.shields.io/twitter/follow/jellydn.svg?style=social)](https://twitter.com/jellydn)
 
 > build a Next.js app powered by Nhost for the backend
+
+## Create new nhost app with this application
+
+```sh
+npx create-next-app my-nhost-app --example "https://github.com/jellydn/nhost-quickstart-app"
+```
 
 ## Install
 
