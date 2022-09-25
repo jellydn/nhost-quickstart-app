@@ -7,6 +7,8 @@
 
 > build a Next.js app powered by Nhost for the backend
 
+[![ITMan - Talk #25 - Tech Radar: Wasmtime v1.0, memlab and nhost [Vietnamese]](https://i.ytimg.com/vi/FslW-YP2oG8/hqdefault.jpg)](https://www.youtube.com/watch?v=FslW-YP2oG8)
+
 ## Create new nhost app with this application
 
 ```sh
